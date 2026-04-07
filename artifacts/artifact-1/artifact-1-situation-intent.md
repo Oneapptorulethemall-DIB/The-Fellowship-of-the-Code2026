@@ -62,4 +62,4 @@ Ohne eine solche Unterstützung besteht die Gefahr, dass Entscheidungen unter Ze
 - Es gibt keine externe Datenquelle
 - Die Nutzung muss einfach und schnell möglich sein
 
-🔙 Zurück zum Red Book (README)(../../README.md)
+🔙 [Zurück zum Red Book](../../README.md)

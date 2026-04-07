@@ -50,13 +50,13 @@ Hier werden die Etappen unserer Reise dokumentiert:
 
 ### Kaptitel 1 – Der Aufbruch
 
-- [Kapitel I – Der Aufbruch](./chapters/chapter-1-setting-out.md)
+- [Kapitel 1 – Der Aufbruch](./chapters/chapter-1-setting-out.md)
 
 ## 🏺 Artifacts
 
 Wichtige Dokumente und Meilensteine des Projekts:
 
-- [Artifact 1 – Situation & Intent](./artifacts/artifact-1/artifact-1-situation-intent.md)
+- [Artefakt 1 – Situation & Zweck](./artifacts/artifact-1/artifact-1-situation-intent.md)
 
 ## 🕒 Changelog
 
