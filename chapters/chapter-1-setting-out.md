@@ -1,10 +1,10 @@
-# The Red Book of Westmarch - Kapitel 1: Der Aufbruch
+# Kapitel 1: Der Aufbruch
 
 >*„Nicht alle, die umherschweifen, sind verloren.“ – Bilbo Beutlin*
 
 ## Inhaltsverzeichnis
 
-- [The Red Book of Westmarch - Kapitel 1: Der Aufbruch](#the-red-book-of-westmarch---kapitel-1-der-aufbruch)
+- [Kapitel 1: Der Aufbruch](#kapitel-1-der-aufbruch)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Zusammenfassung](#zusammenfassung)
   - [Artefakt](#artefakt)
@@ -29,7 +29,7 @@ Der Fellowship Companion soll dabei helfen:
 
 ## Artefakt
 
-**Datei:** [artifact-1-situation-intent.md](../artifacts/artifact-1/artifact-1-situation-intent.md)
+**Datei Artefakt 1:** [artifact-1-situation-intent.md](../artifacts/artifact-1/artifact-1-situation-intent.md)
 
 **Bauweise:**
 Wir haben die Ausgangssituation der Gefährten beschrieben und daraus den Nutzen des Systems abgeleitet.
