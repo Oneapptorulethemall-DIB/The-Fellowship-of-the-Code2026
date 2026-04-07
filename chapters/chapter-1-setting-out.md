@@ -29,7 +29,7 @@ Der Fellowship Companion soll dabei helfen:
 
 ## Artefakt
 
-**Datei Artefakt 1:** [artifact-1-situation-intent.md](../artifacts/artifact-1/artifact-1-situation-intent.md)
+[Artefakt 1 - Situation und Zweck](https://oneapptorulethemall-dib.github.io/The-Fellowship-of-the-Code2026/artifacts/artifact-1/artifact-1-situation-intent.html)
 
 **Bauweise:**
 Wir haben die Ausgangssituation der Gefährten beschrieben und daraus den Nutzen des Systems abgeleitet.
