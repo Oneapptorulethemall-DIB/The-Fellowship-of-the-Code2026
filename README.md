@@ -62,8 +62,10 @@ Wichtige Dokumente und Meilensteine des Projekts:
 
 Alle wesentlichen Änderungen am Logbuch:
 
-2026-04-06: Repository und Initialstruktur erstellt.
+2026-03-31: Zusammenkunft der Gefährten um Anforderungen und Arbeitspakete zu definieren.
+
+2026-04-06: Repository und Initialstruktur erstellen.
 
 2026-04-06: Sammeln aller Daten, Texte, inhalte für Chapters und Artifacts.
 
-2026-04-07: Public Link erstellen, feintuning.
+2026-04-07: Public Link erstellen & feintuning.
