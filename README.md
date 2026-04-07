@@ -20,7 +20,7 @@ Der Fellowship Companion ist ein spezialisiertes Routenplanungs- und Lageübersi
 
 Das Tool bündelt verfügbare Daten, um einen strukturierten Vergleich verfügbarer Routen zu ermöglichen. Dabei werden Abwägungen über Sicherheit, Dauer, physische Belastung und den spezifischen Versorgungsbedarf ausgewertet, um die Route dynamisch an die aktuelle Lage anzupassen.
 
-## Purpose & Key Features
+## Purpose and Key Features
 
 Der Companion unterstützt die Gefährten in folgenden Kernbereichen.
 
@@ -72,4 +72,4 @@ Alle wesentlichen Änderungen am Logbuch:
 
 2026-04-07: artifact-1-situation-intent.md hinzufügen und befüllen.
 
-2026-04-07: Public Link erstellen & feintuning.
+2026-04-07: Public Link erstellen und feintuning.
