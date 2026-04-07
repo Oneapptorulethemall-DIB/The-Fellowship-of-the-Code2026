@@ -41,3 +41,5 @@ Ohne eine solche Unterstützung besteht die Gefahr, dass Entscheidungen unter Ze
 * Informationen können unvollständig oder veraltet sein
 * Es gibt keine externe Datenquelle oder Echtzeit-Updates
 * Die Nutzung muss einfach und schnell möglich sein
+
+🔙 [Back to Overview](../../README.md)

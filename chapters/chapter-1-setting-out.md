@@ -54,3 +54,5 @@ Das Ziel war es, eine klare Grundlage zu schaffen, damit alle weiteren Entscheid
 - Ein System beginnt nicht mit Funktionen, sondern mit einem klaren Verständnis der Situation und des Problems.
 - Struktur hilft, komplexe Inhalte verständlich zu machen.
 - KI kann beim Formulieren helfen, aber die inhaltlichen Entscheidungen müssen selbst getroffen werden.
+
+🔙 [Back to Red Book (README)](../README.md)
