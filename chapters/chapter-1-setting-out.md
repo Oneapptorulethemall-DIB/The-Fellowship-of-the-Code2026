@@ -57,4 +57,4 @@ Das Ziel war es, eine klare Grundlage zu schaffen, damit alle weiteren Entscheid
 - KI kann beim Formulieren helfen, aber die inhaltlichen Entscheidungen müssen selbst getroffen werden.
 - KI wirkt wunder bei Technischen Problemen innerhalb von GitHub. (Fehlersuche & Lösung, Aufbau und Umsetzung)
 
-🔙 [Zurück zum Red Book](../README.md)
+🔙 ([Zurück zum Red Book](https://oneapptorulethemall-dib.github.io/The-Fellowship-of-the-Code2026/))
