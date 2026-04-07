@@ -68,4 +68,8 @@ Alle wesentlichen Änderungen am Logbuch:
 
 2026-04-06: Sammeln aller Daten, Texte, inhalte für Chapters und Artifacts.
 
+2026-04-07: Chapter-1-setting-out.md hinzufügen und befüllen.
+
+2026-04-07: artifact-1-situation-intent.md hinzufügen und befüllen.
+
 2026-04-07: Public Link erstellen & feintuning.
