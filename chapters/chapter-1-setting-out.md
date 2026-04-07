@@ -29,6 +29,7 @@ Der Fellowship Companion soll dabei helfen:
 
 ## Artefakt
 
+**Datei:**
 [Artefakt 1 - Situation und Zweck](https://oneapptorulethemall-dib.github.io/The-Fellowship-of-the-Code2026/artifacts/artifact-1/artifact-1-situation-intent.html)
 
 **Bauweise:**
@@ -55,7 +56,7 @@ Das Ziel war es, eine klare Grundlage zu schaffen, damit alle weiteren Entscheid
 - Ein System beginnt nicht mit Funktionen, sondern mit einem klaren Verständnis der Situation und des Problems.
 - Struktur hilft, komplexe Inhalte verständlich zu machen.
 - KI kann beim Formulieren helfen, aber die inhaltlichen Entscheidungen müssen selbst getroffen werden.
-- KI wirkt wunder bei Technischen Problemen innerhalb von GitHub. (Fehlersuche & Lösung, Aufbau und Umsetzung)
+- KI wirkt wunder bei Technischen Problemen innerhalb von GitHub. (Fehlersuche und Lösung, Aufbau und Umsetzung)
 
 ---
 

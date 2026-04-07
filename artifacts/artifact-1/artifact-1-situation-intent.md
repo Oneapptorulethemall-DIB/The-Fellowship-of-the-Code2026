@@ -8,7 +8,7 @@
   - [2. Zweck (Intent)](#2-zweck-intent)
   - [3. Wert (Value)](#3-wert-value)
   - [4. Was das System grob tun soll](#4-was-das-system-grob-tun-soll)
-  - [5. Annahmen \& Einschränkungen](#5-annahmen--einschränkungen)
+  - [5. Annahmen und Einschränkungen](#5-annahmen-und-einschränkungen)
 
 ---
 
@@ -55,7 +55,7 @@ Ohne eine solche Unterstützung besteht die Gefahr, dass Entscheidungen unter Ze
 
 ---
 
-## 5. Annahmen & Einschränkungen
+## 5. Annahmen und Einschränkungen
 
 - Das System nutzt nur Wissen der Gemeinschaft
 - Informationen können unvollständig oder veraltet sein
