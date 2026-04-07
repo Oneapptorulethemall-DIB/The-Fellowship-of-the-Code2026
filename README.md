@@ -48,20 +48,22 @@ Verwaltung und Überwachung lebensnotwendiger Vorräte:
 
 Hier werden die Etappen unserer Reise dokumentiert:
 
-### Chapter 1 – Setting Out
+### Kaptitel 1 – Der Aufbruch
 
-(Weitere Kapitel folgen im Laufe des Projekts)
+- [Kapitel I – Der Aufbruch](./chapters/chapter-1-setting-out.md)
 
 ## 🏺 Artifacts
 
 Wichtige Dokumente und Meilensteine des Projekts:
 
-Artifact 1 – Situation & Intent
-
-(Weitere Artefakte folgen im Laufe des Projekts)
+- [Artifact 1 – Situation & Intent](./artifacts/artifact-1/artifact-1-situation-intent.md)
 
 ## 🕒 Changelog
 
 Alle wesentlichen Änderungen am Logbuch:
 
-2026-04-06: Repository created and initial structure set up.
+2026-04-06: Repository und Initialstruktur erstellt.
+
+2026-04-06: Sammeln aller Daten, Texte, inhalte für Chapters und Artifacts.
+
+2026-04-07: Public Link erstellen, feintuning.
