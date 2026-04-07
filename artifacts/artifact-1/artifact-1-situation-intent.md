@@ -26,20 +26,20 @@ Er hilft der Gemeinschaft:
 * Unsicherheiten sichtbar zu machen
 * Entscheidungen bewusster zu treffen
 
-Ohne eine solche Unterstützung besteht die Gefahr, dass Entscheidungen unter Zeitdruck oder auf Basis unvollständiger Informationen getroffen werden.
+Ohne eine solche Unterstützung besteht die Gefahr, dass Entscheidungen unter Zeitdruck oder auf Basis unvollständiger Informationen getroffen werden und im schlimmsten Fall zum Tod führen!
 
 ## 4. Was das System grob tun soll
 
-* Wissen der Mitglieder über Routen sammeln
-* verschiedene Optionen vergleichbar machen
-* Risiken und Unsicherheiten sichtbar darstellen
-* einfache Alternativen (z. B. Plan B) aufzeigen
+* Wissen der Mitglieder über Routen, Geheimwege und Nächtigungsmöglichkeiten sammeln
+* verschiedene Optionen vergleichbar und visuell darstellen
+* Risiken und Unsicherheiten ausgeben
+* einfache Alternativen (z. B. Plan B, Plan C) mit kurzer Beschreibung aufzeigen
 
 ## 5. Annahmen & Einschränkungen
 
 * Das System nutzt nur Wissen der Gemeinschaft
 * Informationen können unvollständig oder veraltet sein
-* Es gibt keine externe Datenquelle oder Echtzeit-Updates
+* Es gibt keine externe Datenquelle
 * Die Nutzung muss einfach und schnell möglich sein
 
 🔙 [Back to Overview](../../README.md)
