@@ -1,8 +1,8 @@
-# Artefakt 1 – Situation & Zweck
+# Artefakt 1 – Situation und Zweck
 
 ## Inhaltsverzeichnis
 
-- [Artefakt 1 – Situation \& Zweck](#artefakt-1--situation--zweck)
+- [Artefakt 1 – Situation und Zweck](#artefakt-1--situation-und-zweck)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [1. Situation](#1-situation)
   - [2. Zweck (Intent)](#2-zweck-intent)

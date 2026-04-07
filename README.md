@@ -56,7 +56,7 @@ Hier werden die Etappen unserer Reise dokumentiert:
 
 Wichtige Dokumente und Meilensteine des Projekts:
 
-- [Artefakt 1 – Situation & Zweck](./artifacts/artifact-1/artifact-1-situation-intent.md)
+- [Artefakt 1 – Situation und Zweck](./artifacts/artifact-1/artifact-1-situation-intent.md)
 
 ## 🕒 Changelog
 
