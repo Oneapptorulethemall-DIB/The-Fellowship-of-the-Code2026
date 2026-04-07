@@ -1,6 +1,6 @@
 # The Red Book of Westmarch
 
-##💍 Team: One app to rule them all
+## 💍 Team: One app to rule them all
 
 ### Die Gefährten
 
@@ -24,15 +24,15 @@ Das Tool bündelt verfügbare Daten, um einen strukturierten Vergleich verfügba
 
 Der Companion unterstützt die Gefährten in folgenden Kernbereichen.
 
-### Situational Awareness: 
+### Situational Awareness
 
 Aktuelle Gefahrenlagen erkennen und verstehen.
 
-### Decision Support: 
+### Decision Support
 
 Fundierte Entscheidungen auf Basis von Datenanalysen treffen.
 
-### Resource Tracking: 
+### Resource Tracking
 
 Verwaltung und Überwachung lebensnotwendiger Vorräte:
 
