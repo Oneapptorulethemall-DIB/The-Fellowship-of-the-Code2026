@@ -40,7 +40,7 @@ Verwaltung und Überwachung lebensnotwendiger Vorräte:
 
 💧 Wasser
 
-🥔 Kartoffeln
+🥔 Kartoffeln - "Man kocht sie, stampft sie, tut sie in die Suppe" - Samweis „Sam“ Gamdschie
 
 🍃 Pfeifenkraut
 
