@@ -1,7 +1,3 @@
----
-config:
-  layout: elk
----
 flowchart TB
     %% ENTRY POINT
     A([User opens Route Comparison screen])
