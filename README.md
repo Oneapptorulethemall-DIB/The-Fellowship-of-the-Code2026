@@ -92,4 +92,5 @@ Alle wesentlichen Änderungen am Logbuch:
 2026-04-20: artifact-2-decisions.md hinzufügen und befüllen.
 
 2026-04-20: Feintuning der Inhalte und Verlinkung der src Dateien.
+
 </details>
