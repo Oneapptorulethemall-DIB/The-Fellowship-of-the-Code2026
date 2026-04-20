@@ -63,6 +63,9 @@ Wichtige Dokumente und Meilensteine des Projekts:
 
 Alle wesentlichen Änderungen am Logbuch:
 
+<details>
+<summary>Changelog anzeigen</summary>
+
 2026-03-31: Zusammenkunft der Gefährten um Anforderungen und Arbeitspakete zu definieren.
 
 2026-04-06: Repository und Initialstruktur erstellen.
@@ -74,3 +77,18 @@ Alle wesentlichen Änderungen am Logbuch:
 2026-04-07: artifact-1-situation-intent.md hinzufügen und befüllen.
 
 2026-04-07: Public Link erstellen und feintuning.
+
+2026-04-16: Fellowship Companion Board in Miro erstellt – gemeinsame visuelle Grundlage geschaffen.
+
+2026-04-16: Brainstorming-Runde zu App-Funktionen, Design und Nutzerführung durchgeführt.
+
+2026-04-16: Strukturierte Übersicht im ConceptBoard erstellt.
+
+2026-04-20: Erste Decision erarbeitet, überarbeitet und finale Version als Grundlage festgelegt.
+
+2026-04-20: Flowchart in Mermaid umgesetzt – Ablauf und Struktur der App visuell abgebildet.
+
+2026-04-20: artifact-2-decisions.md hinzufügen und befüllen.
+
+2026-04-20: Feintuning der Inhalte und Verlinkung der src Dateien.
+</details>
