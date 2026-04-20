@@ -85,7 +85,7 @@ transparente Abwägung.
 
 ## 2. Interaktionsfluss (Flow)
 
-**Flowchart:** [Flow](src/decision.png)
+**Flowchart:** [decision.png](src/decision.png)
 
 **Flowchart Code:** [decisions.mermaid.md](src/decisions.mermaid.md)
 
