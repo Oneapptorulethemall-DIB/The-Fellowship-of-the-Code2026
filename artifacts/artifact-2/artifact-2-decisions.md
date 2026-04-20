@@ -156,7 +156,7 @@ Rückkehr zur Übersicht. Entscheidung ist dokumentiert und nachvollziehbar.
 
 ## 3. Wireframe
 
-**Wireframe:** [Wireframe Route Comparison](src/Wireframe.jpeg)
+**Wireframe:** [Wireframe.jpeg](src/Wireframe.jpeg)
 
 Der Wireframe zeigt eine mobile Vergleichsansicht, optimiert für schnelle, wiederholte
 Entscheidungszyklen im Feld.
