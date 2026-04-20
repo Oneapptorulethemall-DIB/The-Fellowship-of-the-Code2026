@@ -64,6 +64,7 @@ Wichtige Dokumente und Meilensteine des Projekts:
 Alle wesentlichen Änderungen am Logbuch:
 
 <details>
+
 <summary>Changelog anzeigen</summary>
 
 2026-03-31: Zusammenkunft der Gefährten um Anforderungen und Arbeitspakete zu definieren.
