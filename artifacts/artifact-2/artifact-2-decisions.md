@@ -85,6 +85,9 @@ transparente Abwägung.
 
 ## 2. Interaktionsfluss (Flow)
 
+**Flowchart:** [Route Comparison Flow](src/decision.png)
+**Flowchart Code:** [decisions.mermaid.md](src/decisions.mermaid.md)
+
 Der Flow beschreibt die Nutzung der Vergleichsfunktion als iterativen Entscheidungsprozess,
 nicht als lineare Abfolge.
 
@@ -130,7 +133,7 @@ System zeigt gewählte Route und aktuelles Ranking. Benutzer entscheidet:
 System speichert: Route, Zeitstempel, Entscheider, aktive Gewichtungen und bekannte
 Informationslücken.
 
-**7. Fallback-Definition (optional)**
+**7. Fallback-Definition**
 
 System fragt nach alternativer Route:
 
@@ -146,11 +149,13 @@ Rückkehr zur Übersicht. Entscheidung ist dokumentiert und nachvollziehbar.
 - Iterativ statt linear
 - Explizite Entscheidungspunkte
 - System unterstützt, entscheidet aber nicht
-- Unsicherheit ist integraler Bestandteil
+- Unsicherheit ist wesentlicher Bestandteil
 
 ---
 
 ## 3. Wireframe
+
+**Wireframe:** [Wireframe Route Comparison](src/Wireframe.jpeg)
 
 Der Wireframe zeigt eine mobile Vergleichsansicht, optimiert für schnelle, wiederholte
 Entscheidungszyklen im Feld.
