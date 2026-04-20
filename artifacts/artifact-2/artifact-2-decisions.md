@@ -85,7 +85,8 @@ transparente Abwägung.
 
 ## 2. Interaktionsfluss (Flow)
 
-**Flowchart:** [Route Comparison Flow](src/decision.png)
+**Flowchart:** [Flow](src/decision.png)
+
 **Flowchart Code:** [decisions.mermaid.md](src/decisions.mermaid.md)
 
 Der Flow beschreibt die Nutzung der Vergleichsfunktion als iterativen Entscheidungsprozess,
