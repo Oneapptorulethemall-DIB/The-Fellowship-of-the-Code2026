@@ -1,5 +1,4 @@
-flowchart TB
-    %% ENTRY POINT
+%% ENTRY POINT
     A([User opens Route Comparison screen])
     A --> B{"Are there at least 2 routes<br>in the Knowledge Registry?"}
 
