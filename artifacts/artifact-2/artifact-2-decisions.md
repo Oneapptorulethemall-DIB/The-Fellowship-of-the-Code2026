@@ -244,4 +244,4 @@ Nicht enthalten:
 
 ---
 
-🔙 [Zurück zum Red Book](../../README.m
+🔙 [Zurück zum Red Book](https://oneapptorulethemall-dib.github.io/The-Fellowship-of-the-Code2026/)
