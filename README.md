@@ -51,6 +51,7 @@ Hier werden die Etappen unserer Reise dokumentiert:
 ### Kaptitel 1 – Der Aufbruch
 
 - [Kapitel 1 – Der Aufbruch](./chapters/chapter-1-setting-out.md)
+- [Kaptiel 2 - Die Wegentscheidung](./chapters/chapter-2-paths-choices.md)
 
 ## 🏺 Artifacts
 
