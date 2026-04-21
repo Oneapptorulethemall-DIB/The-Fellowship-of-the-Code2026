@@ -25,11 +25,12 @@ Es zwingt alle Routen in ein gemeinsames Vergleichsformat (vier Kriterien mit Qu
 Es erlaubt dem Nutzer, die Entscheidung aktiv umzustrukturieren (durch Priorisierung eines Kriteriums).
 
 Statt eine Empfehlung zu geben, zeigt das System warum eine Route vorne liegt — und macht damit die Entscheidungslogik überprüfbar.
+
 ---
 
 ## Artefakt
 
-**Datei Artefakt 2:** [Artefakt 2 – Anwendungsdesign (Entscheidungen)](../artifacts/artifact-2/artifact-2-decisions.md)
+**Datei** [Artefakt 2 – Anwendungsdesign (Entscheidungen)](../artifacts/artifact-2/artifact-2-decisions.md)
 
 **Bauweise:**
 Wir haben eine Systemfunktion (C2 — Kriterienbasierter Routenvergleich) ausgewählt und deren Ablauf als iterativen Flow beschrieben. 
