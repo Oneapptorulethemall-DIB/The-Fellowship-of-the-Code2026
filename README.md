@@ -48,8 +48,6 @@ Verwaltung und Überwachung lebensnotwendiger Vorräte:
 
 Hier werden die Etappen unserer Reise dokumentiert:
 
-### Kaptitelauswahl
-
 - [Kapitel 1 – Der Aufbruch](./chapters/chapter-1-setting-out.md)
 - [Kaptiel 2 - Die Wegentscheidung](./chapters/chapter-2-paths-choices.md)
 
