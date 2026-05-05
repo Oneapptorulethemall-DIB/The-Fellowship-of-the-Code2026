@@ -1,0 +1,436 @@
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #455361;
+    padding: 10px 0;
+}
+.left-button {
+    position: absolute;
+    left: 10px;
+    margin: 0;
+    padding: 12px 20px;
+    border: none;
+    color: white;
+    background: #5a6b7d;
+    line-height: 1.2;
+    font-size: 24;
+    
+}
+.center-heading {
+    flex-grow: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    line-height: 1.2;
+}
+.spacer {
+    width:80px;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex start;
+    gap: 20px;
+
+    background: white;
+    color: #455361;
+    padding: 10px 15px;
+    margin: 0;
+    font-weight: normal;
+}
+.location-info {
+    font-weight: bold;
+}
+.weather-info {
+    opacity: 0.9;
+}
+
+.action-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 25px;
+    color: #455361;
+    width: 100%;
+}
+.main-title {
+    margin: 0;
+    font-size: 20;
+    white-space: nowrap;
+}
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10;
+}
+.action-btn {
+    padding: 8px 16px;
+    color: #455361;
+    border: 1px solid #8e794f;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s;
+    touch-action: manipulation;
+    -webkit-tap-highlite-color: transparent;
+}
+@media (hover: hover) {
+    .action-btn:hover {
+        background: #6c7e91;
+    }
+}
+.action-btn:activate {
+    background: #3d4a58;
+    transform: scale(0.95);
+}
+
+.routes-container {
+  padding: 20px;
+  background: #455361;
+  color: white;
+}
+
+.section-title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  border-bottom: 1px solid #8e794f;
+  padding-bottom: 5px;
+}
+
+.routes-grid {
+  display: flex;
+  flex-wrap: wrap;       /* Wichtig für Mobile: Buttons fließen in die nächste Zeile */
+  gap: 15px;
+}
+
+.route-btn {
+  display: flex;
+  flex-direction: column; /* Stapelt Routenname und Ersteller untereinander */
+  align-items: flex-start;
+  padding: 12px 18px;
+  background: #5a6b7d;
+  color: white;
+  border: 1px solid #8e794f;
+  border-radius: 10px;    /* Abgerundete Kanten */
+  cursor: pointer;
+  min-width: 200px;       /* Sorgt für eine einheitliche Größe */
+  transition: transform 0.1s, background 0.2s;
+}
+
+.route-btn:active {
+  transform: scale(0.97);
+  background: #3d4a58;
+}
+
+.route-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.proposer {
+  font-size: 12px;
+  color: #e2d1a6;         /* Goldton für die Gefährten-Namen */
+  font-style: italic;
+}
+
+/* Mobile Optimierung */
+@media (max-width: 480px) {
+  .route-btn {
+    width: 100%;          /* Buttons nehmen auf dem Handy die volle Breite ein */
+  }
+}
+
+/* ab hier configuration der mittleren section des html documents, also da wo safty duration, Supplies in der app angezeigt werden sollen.
+dieser Teil ist statisch seine intereaktivität wird erst mit java script wirklich durchsetzbar sein optik muss noch an den rest des app designs angepasst werden!*/
+
+.priority-module {
+  font-family: sans-serif;
+  background: #fff;
+  padding: 20px;
+}
+
+.priority-group {
+  margin-bottom: 30px;
+}
+
+.priority-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.route-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Wichtig für Mobile: Karten brechen um */
+}
+
+.card {
+  flex: 1; /* Karten teilen sich den Platz gleichmäßig auf */
+  min-width: 150px;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 12px; /* Schöne abgerundete Ecken wie im Bild */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.location {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.detail {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Status-Farben */
+.ok { color: #4caf50; }
+.critical { color: #d32f2f; }
+.uncertain { color: #f9a825; }
+.low { color: #1976d2; }
+
+/* Mobile Optimierung */
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%; /* Auf dem Handy nimmt eine Karte die ganze Breite ein */
+  }
+}
+/*letzter header */
+
+/* Ranking Liste */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.rank-card {
+  display: flex;
+  align-items: center;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px 20px;
+  gap: 15px;
+}
+
+.rank-card.gold {
+  border: 2px solid #8e794f; /* Goldener Rahmen für Platz 1 */
+}
+
+.rank-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8e794f;
+  min-width: 40px;
+}
+
+.rank-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.route-summary {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Gap Analysis Box 
+.gap-analysis-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #455361; 
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 5px solid #d32f2f; 
+}*/
+
+/*.gap-title {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.gap-text {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.detail-btn {
+  background: #e2d1a6;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: default; 
+  white-space: nowrap;
+}*/
+
+/* Mobile Optimierung 
+@media (max-width: 600px) {
+  .gap-analysis-box {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .detail-btn {
+    width: 100%;
+  }
+}*//* bis hier her der zuerst angedachte Stylesheet für die Zusammenfassung und de view Gaps buttons*/
+
+/* Layout-Container */
+.gap-container {
+    margin-top: 20px;
+    font-family: Arial, sans-serif; /* Einheitliche Typografie */
+}
+
+/* Haupt-Box Styling */
+.gap-analysis-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #455361; /* Dein dunkles Farbschema */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid #d32f2f; /* Rote Markierung */
+}
+
+/* Button-Styling */
+.detail-btn {
+    background: #e2d1a6;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.detail-btn:hover {
+    background-color: #d4a017;
+    transform: translateY(-2px);
+}
+
+/* Detail-Karte (Das "Dokument") */
+.details-card {
+    display: none; /* Wichtig für die Initial-Funktion */
+    background-color: #ffffff;
+    color: #333;
+    border-left: 5px solid #f2bb13; /* Gold-Akzent */
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Listen-Styling */
+.details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.details-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.details-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #f2bb13;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*optimierung für mobile devices*/
+/* Mobile Optimierung (Responsive Design) */
+@media (max-width: 768px) {
+    /* 1. Haupt-Box anpassen */
+    .gap-analysis-box {
+        flex-direction: column; /* Elemente untereinander statt nebeneinander */
+        align-items: flex-start; /* Linksbündige Ausrichtung */
+        gap: 15px; /* Abstand zwischen Text und Button */
+        padding: 15px;
+    }
+
+    /* 2. Button auf volle Breite strecken */
+    .detail-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px; /* Etwas größere Klickfläche für Touch-Bedienung */
+    }
+
+    /* 3. Detail-Karte optimieren */
+    .details-card {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .details-header h3 {
+        font-size: 16px; /* Schriftgröße leicht reduzieren */
+    }
+
+    /* 4. Listen-Abstände anpassen */
+    .details-list li {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}

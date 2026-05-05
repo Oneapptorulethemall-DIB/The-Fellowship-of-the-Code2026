@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!--Neben dem charset um alle Buchstaben darstellen zu koennen ist auch die Idee die Datei vom haus aus fuer alle devices zu optimieren ohne drei verschiedne 
+        Versionen der datei zu schreiben "viewport". Da die html Datei nur das Grundgeruest liefern soll ist im head auch die verlinkung zum css sheet eingebeetet!
+        Die generelle Idee ist die Seite in drei grosse Bereiche einzuteilen. Diese haben die gleiche Gewichtung was sich in drei h2 overheads abbildet.
+        Die Listen sollen schon im html dokument fuer eine strukturelle Ordnung auf dem Display sorgen.-->
+        <meta charset="utf-8">
+        <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>The Fellowship Companion</title>
+    </head>
+    <body>
+        <div class="header-container">
+            <button class="left-button">BACK</button>
+            <h1 class="center-heading">Route Comparison</h1>
+            <div class="spacer"></div>
+        </div>
+        <h2 class="info-header"><!-- Definiert die Location mit Wetter Leiste, soll in weiterer folge random Locations aus dem internet verlinken diese in Mittelerde
+            Locations umbenennen und die dazugehörigen WetterDaten mit hochladen.-->
+            <span class="location-info">Middleearth, Rivendell</span>
+            <span class="weather-info">Heiter, 21°C</span>
+        </h2>
+        <section class="routes-container">
+            <h2 class="section-title">ROUTES</h2>
+<!--ab Hier werden die routen Felder angeordnet und definiert derzeit 4 können auch weider nur drei sein. sie sind jetzt schon klickbar das Design selbst hält sich an die
+wireframe Vorgabe mit einem zusätzlichen leicht goldenem Touch in den frames, das ist allerdings im css file definiert-->
+             <div class="routes-grid">
+                <button class="route-btn">
+                    <span class="route-name">Pass of Caradhras</span>
+                    <span class="proposer">vorgeschlagen von: Gandalf</span>
+                 </button>
+
+                <button class="route-btn">
+                     <span class="route-name">Mines of Moria</span>
+                     <span class="proposer">vorgeschlagen von: Gimli</span>
+                </button>
+
+                 <button class="route-btn">
+                    <span class="route-name">Gate of Rohan</span>
+                    <span class="proposer">vorgeschlagen von: Aragorn</span>
+                </button>
+
+                <button class="route-btn">
+                    <span class="route-name">The way to the far south</span>
+                    <span class="proposer">vorgeschlagen von: Frodo</span>
+                </button>
+             </div>
+        </section>
+        
+        <header class="action-header">
+            <h2 class="main-title">Priority weights:</h2>
+<!--der header setzt die gewichtung optisch sind die "butons" noch eng beieinander. Die Idee die wir hatten das sie anklickbar sind und dann das ganze sich neu ordnet.
+Ich glaube dies wird ein overkill sein für die leichtigkeit des Programms selbst, nach dem ohnehin alle angezeigt werden ist die anordnung in frage zu stellen!
+Deshalb ist auch die Priority weights Leiste mit den Buttons so auch in frage zu stellen. Vorschlag um das zu lösen, neu benennung dieser Priority weights in Route Details,
+weglassen der Buttons Optik muss noch angepasst werden die Abstände zwischen den einzelenen boxen sind aus meiner sicht zu groß und können geringer ausfallen bei der Abgabe am ende des Semesters
+Wie wir die berechnug des jeweiligen Daten in den boxen machen sollen ist mir noch nciht eingefallen, das ist aber javascript-->
+            <div class="button-group">
+                <button class="action-btn">Safety</button>
+                <button class="action-btn">Duration</button>
+                <button class="action-btn">Supply</button>
+                <button class="action-btn">Hobbit</button>
+            </div>
+            <div class="priority-module">
+  
+            <!-- Beispiel für SAFETY -->
+            <div class="priority-group">
+                <h3 class="priority-title">Safety</h3>
+                <div class="route-cards">
+                
+                <div class="card">
+                    <span class="location">Caradhras</span>
+                    <span class="status ok">OK</span>
+                    <span class="detail">Weather only</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Moria</span>
+                    <span class="status critical">CRITICAL</span>
+                    <span class="detail">Occupants unknown</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Rohan</span>
+                    <span class="status uncertain">UNCERTAIN</span>
+                    <span class="detail">Saruman allegiance?</span>
+                </div>
+                
+                </div>
+            </div>
+
+            <!-- Weitere Gruppen für Duration, Supplies etc. folgen dem gleichen Schema -->
+            </div>
+            <div class="priority-module">
+  
+            <!-- Beispiel für Duration -->
+            <div class="priority-group">
+                <h3 class="priority-title">Duration</h3>
+                <div class="route-cards">
+                
+                <div class="card">
+                    <span class="location">Caradhras</span>
+                    <span class="status ok">3-5 days</span>
+                    <span class="detail">Weather-dependent</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Moria</span>
+                    <span class="status ok">2-3 days</span>
+                    <span class="detail">If passage is intact</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Rohan</span>
+                    <span class="status critical">7-10 days</span>
+                    <span class="detail">long detour</span>
+                </div>
+                
+                </div>
+            </div>
+
+            <!-- Weitere Gruppen für Duration, Supplies etc. folgen dem gleichen Schema -->
+            </div>
+            <div class="priority-module">
+  
+            <!-- Beispiel für Supplies -->
+            <div class="priority-group">
+                <h3 class="priority-title">Supplies</h3>
+                <div class="route-cards">
+                
+                <div class="card">
+                    <span class="location">Caradhras</span>
+                    <span class="status moderate">MODERATE</span>
+                    <span class="detail">Coldrations are needed</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Moria</span>
+                    <span class="status ok">LOW</span>
+                    <span class="detail">underground, water?</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Rohan</span>
+                    <span class="status critical">HIGH</span>
+                    <span class="detail">Long, resupply unclear</span>
+                </div>
+                
+                </div>
+            </div>
+
+            <!-- Weitere Gruppen für Duration, Supplies etc. folgen dem gleichen Schema -->
+            </div>
+            <div class="priority-module">
+            
+            <!-- Beispiel für Hobbitready? -->
+            <div class="priority-group">
+                <h3 class="priority-title">Hobbit-ready</h3>
+                <div class="route-cards">
+                
+                <div class="card">
+                    <span class="location">Caradhras</span>
+                    <span class="status ocritical">OCRITICAL</span>
+                    <span class="detail">Altitude, snow, no gear</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Moria</span>
+                    <span class="status ok">OK</span>
+                    <span class="detail">Flat, underground</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Rohan</span>
+                    <span class="status good">GOOD</span>
+                    <span class="detail">Lowland road, easy</span>
+                </div>
+                
+                </div>
+            </div>
+
+            <!-- Weitere Gruppen für Duration, Supplies etc. folgen dem gleichen Schema -->
+            </div>
+            <div class="priority-module">
+            
+            <!-- Beispiel für SAFETY -->
+            <div class="priority-group">
+                <h3 class="priority-title">Confidence</h3>
+                <div class="route-cards">
+                
+                <div class="card">
+                    <span class="location">Caradhras</span>
+                    <span class="status ok">HIGH</span>
+                    <span class="detail">2 sources, recent</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Moria</span>
+                    <span class="status critical">LOW - 2 gaps</span>
+                    <span class="detail">Occupants? Structure?</span>
+                </div>
+
+                <div class="card">
+                    <span class="location">Rohan</span>
+                    <span class="status uncertain">MEDIUM</span>
+                    <span class="detail">Saruman status?</span>
+                </div>
+                
+                </div>
+            </div>
+
+            <!-- Weitere Gruppen für Duration, Supplies etc. folgen dem gleichen Schema -->
+            </div>
+
+<!--Ich weiß noch nicht warum aber dieser header steht auf einmal neben der letzten confidence card des Prio Moduls. Allerdings nur die liste ?? -->
+
+        <section class="ranking-module">
+        <h2 class="section-title">Route Ranking</h2>
+        
+        <div class="ranking-list">
+            <!-- Rank 1 -->
+            <div class="rank-card gold">
+            <div class="rank-number">#1</div>
+            <div class="rank-info">
+                <span class="route-name">Pass of Cadadhras</span>
+                <span class="route-summary">Schnellste Verbindung, hohes Risiko (Gandalf)</span>
+            </div>
+            </div>
+
+            <!-- Rank 2 -->
+            <div class="rank-card">
+            <div class="rank-number">#2</div>
+            <div class="rank-info">
+                <span class="route-name">Mines of Moria</span>
+                <span class="route-summary">Gefahr durch Balrog, unklare Versorgung (Gimli)</span>
+            </div>
+            </div>
+
+            <!-- Rank 3 -->
+            <div class="rank-card">
+            <div class="rank-number">#3</div>
+            <div class="rank-info">
+                <span class="route-name">Gate of Rohan</span>
+                <span class="route-summary">Einfach aber langsam (Aragorn)</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Gap Analysis Box = Ursprüngliches Modell der Letzten Box für die Zusammenfassung und des View Gaps Buttons -->
+        <!--<div class="gap-analysis-box">
+            <div class="gap-content">
+            <span class="gap-title">Missing Information</span>
+            <p class="gap-text">Missing Information <strong>4 Gaps</strong> (Weather Caradhras, Supplies Moria).</p>
+            </div>
+            <button class="detail-btn" onklick="toggleDetails()">View Gaps</button>
+        </div>-->
+
+        <!--das element representiert das versteckte fenster mit den details  die nach dem drücken des "View Gaps" Buttons erscheinen soll-->
+        <!-- Gap Analysis Bereich -->
+        <section class="gap-container">
+            <div class="gap-analysis-box">
+                <div class="gap-content">
+                    <span class="gap-title">Missing Information</span>
+                    <p class="gap-text">Missing Information <strong>4 Gaps</strong> (Weather Caradhras, Supplies Moria).</p>
+                </div>
+                <!-- Funktionsaufruf für die Logik -->
+                <button class="detail-btn" onclick="toggleDetails()">View Gaps</button>
+            </div>
+
+            <!-- Das Detail-Dokument (initial versteckt durch CSS/JS) Hier die meldungen müssen noch interaktiv werden daten
+                     müssen aus einer Datenbank oder einem Dokument gezogen werden bzw aus den vorhanden datensätzen die in der App vorhanden sind-->
+            <div id="gap-details-modal" class="details-card">
+                <div class="details-header">
+                    <h3>Detail Information: Gap Analysis</h3>
+                    <button class="close-btn" onclick="toggleDetails()">×</button>
+                </div>
+                <ul class="details-list">
+                    <li><strong>Weather Caradhras:</strong> Extreme Blizzards, way is or might be blocked.</li>
+                    <li><strong>Supplies Moria:</strong> Not enough Supplies for 10 days.</li>
+                    <li><strong>Status:</strong> CRITICAL - imidate action needed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Das JavaScript bleibt im HTML (am Ende vor </body>) -->
+        <script>
+        function toggleDetails() {
+            const modal = document.getElementById("gap-details-modal");
+            if (modal.style.display === "none" || modal.style.display === "") {
+                modal.style.display = "block";
+            } else {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+        </section>
+        
+           <!--Div element soll als Box erscheinen mit einer zusammenfassung der Gaps und auf der rechtenseite aus user Sicht einen View button haben um zu weitern
+           Deteils zu gelangen. Kann aber auch als ganzes ein klickbares Element sein welches die Zusammenfassung darstellt-->
+       
+    </body>
+</html>
