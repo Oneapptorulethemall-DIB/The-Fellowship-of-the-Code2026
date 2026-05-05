@@ -49,7 +49,8 @@ Verwaltung und Überwachung lebensnotwendiger Vorräte:
 Hier werden die Etappen unserer Reise dokumentiert:
 
 - [Kapitel 1 – Der Aufbruch](./chapters/chapter-1-setting-out.md)
-- [Kaptiel 2 - Die Wegentscheidung](./chapters/chapter-2-paths-choices.md)
+- [Kapitel 2 - Die Wegentscheidung](./chapters/chapter-2-paths-choices.md)
+- [Kapitel 3 - Mach es sichtbar](./chapters/chapter-3-representation.md)
 
 ## 🏺 Artifacts
 
@@ -57,6 +58,7 @@ Wichtige Dokumente und Meilensteine des Projekts:
 
 - [Artefakt 1 – Situation und Zweck](./artifacts/artifact-1/artifact-1-situation-intent.md)
 - [Artefakt 2 - Entscheidungen](./artifacts/artifact-2/artifact-2-decisions.md)
+- [Artefakt 3 - Mach es sichtbar](./artifacts/artifact-3/artifact-3-representation.md)
 
 ## 🕒 Changelog
 
@@ -80,6 +82,12 @@ Alle wesentlichen Änderungen am Logbuch:
 <li>2026-04-20: Flowchart in Mermaid umgesetzt.</li>
 <li>2026-04-20: artifact-2-decisions.md hinzufügen und befüllen.</li>
 <li>2026-04-20: Feintuning der Inhalte und Verlinkung der src Dateien.</li>
+<li>2026-05-02: Zusammenkunft um Darstellung zu diskutieren</li>
+<li>2026-05-02: Arbeitspakete werden definiert.</li>
+<li>2026-05-04: Zusammenkunft um HTML & CSS inhalte zu screenen.</li>
+<li>2026-05-04: Neue Ideen für Companion App gesammelt und für nächsten Arbeitsschritt geplant zu implementerien.</li>
+<li>2026-05-05: Artefakt und Chapter Inhalte definiert und erstellt.</li>
+<li>2026-05-05: Redbook erweitert und angepasst.</li>
 </ul>
 
 </details>
