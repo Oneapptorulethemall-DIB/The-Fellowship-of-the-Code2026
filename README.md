@@ -82,7 +82,7 @@ Alle wesentlichen Änderungen am Logbuch:
 <li>2026-04-20: Flowchart in Mermaid umgesetzt.</li>
 <li>2026-04-20: artifact-2-decisions.md hinzufügen und befüllen.</li>
 <li>2026-04-20: Feintuning der Inhalte und Verlinkung der src Dateien.</li>
-<li>2026-05-02: Zusammenkunft um Darstellung zu diskutieren</li>
+<li>2026-05-02: Zusammenkunft um Darstellung zu diskutieren.</li>
 <li>2026-05-02: Arbeitspakete werden definiert.</li>
 <li>2026-05-04: Zusammenkunft um HTML & CSS inhalte zu screenen.</li>
 <li>2026-05-04: Neue Ideen für Companion App gesammelt und für nächsten Arbeitsschritt geplant zu implementerien.</li>
