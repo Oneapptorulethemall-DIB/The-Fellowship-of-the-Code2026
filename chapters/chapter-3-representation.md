@@ -16,18 +16,18 @@
 ## Zusammenfassung
 
 In diesem Kapitel wurde eine **statische Benutzeroberfläche** für den Fellowship Companion
-umgesetzt, mit Fokus auf die Fähigkeit des Routenvergleichs.
+umgesetzt, mit Fokus auf den Routenvergleich.
 
-Ziel war es, die zuvor erarbeiteten Konzepte und Wireframes in eine konkrete, sichtbare
+Ziel war es, die Konzepte und Wireframe in eine konkrete
 Struktur zu bringen. Das Ergebnis ist ein Interface, das es der Fellowship ermöglicht,
-verschiedene Routen anhand zentraler Kriterien zu vergleichen:
+verschiedene Routen anhand verschiedener Kriterien zu vergleichen:
 
 - Sicherheit
 - Dauer
 - Versorgung
 - Unsicherheit (Gap-Analyse)
 
-Die Oberfläche macht den Entscheidungsprozess nachvollziehbar, indem sie Informationen in
+Die Oberfläche macht die Empfehlung nachvollziehbar, indem sie Informationen in
 klar getrennte Bereiche gliedert: Routen, Bewertungskriterien, Ranking und Gap-Analyse.
 
 ---
@@ -48,8 +48,7 @@ Das Artefakt stellt eine statische Umsetzung des Fellowship Companion dar. Es um
 
 **Fokus:**
 
-Komplexe Entscheidungen verständlich machen, indem relevante Informationen klar strukturiert
-und konsistent dargestellt werden.
+Komplexe Entscheidungen verständlich machen, indem relevante Informationen klar strukturiert dargestellt werden.
 
 ---
 
@@ -59,7 +58,7 @@ und konsistent dargestellt werden.
 - **Realität** — Viele kleine Entscheidungen (Abstände, Hierarchie, Struktur) mussten bewusst
   getroffen werden — KI allein reicht dafür nicht immer aus. 
 - **Hilfe** — Unterstützung bei der Strukturierung des Interfaces, der Übersetzung des
-  Wireframes in eine konsistente Darstellung sowie bei der Formulierung der Design Rationale.
+  Wireframes in eine konsistente Darstellung.
 - **Grenzen** — Vorschläge enthielten teilweise unnötige Komplexität (z. B. Interaktionen,
   die für diese Aufgabe nicht erforderlich sind). Ergebnisse mussten geprüft und angepasst werden.
 - **Eigene Entscheidungen** — Reduktion auf das Wesentliche, Fokus auf Klarheit,
