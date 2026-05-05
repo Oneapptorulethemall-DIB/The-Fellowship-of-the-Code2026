@@ -16,7 +16,7 @@
 
 **Gewählte Fähigkeit:** Routenvergleich und Entscheidungsunterstützung
 
-Diese Fähigkeit ermöglicht es der Gemeinschaft, verschiedene Routenoptionen anhand zentraler
+Diese Fähigkeit ermöglicht es der Gemeinschaft, verschiedene Routenoptionen anhand einiger
 Kriterien zu vergleichen: Sicherheit, Dauer, Versorgung, Hobbit-Tauglichkeit und Verlässlichkeit.
 Zusätzlich werden die Routen priorisiert (Ranking) und Unsicherheiten durch eine Gap-Analyse
 sichtbar gemacht.
@@ -24,7 +24,7 @@ sichtbar gemacht.
 ### Relevanz für die Fellowship
 
 In dieser Phase der Reise (Aufbruch von Bruchtal) steht die Gemeinschaft vor einer
-entscheidenden Wegwahl. Jede Route bringt unterschiedliche Risiken, Dauer und Anforderungen.
+entscheidenden Wegwahl. Jede Route bringt unterschiedliche Risiken, Dauer und Anforderungen mit sich.
 
 Diese Fähigkeit ist entscheidend, weil sie:
 
@@ -42,7 +42,7 @@ Ohne diese Struktur würde die Fellowship Entscheidungen auf Basis von Vermutung
 **Interface:** [interface.html](src/interface.html)
 
 Das Interface stellt eine Routenvergleichsansicht innerhalb des Fellowship Companion dar.
-Es bildet den Entscheidungsprozess in einer klar strukturierten, statischen Form ab.
+Es bildet den Entscheidungsprozess in einer klar strukturierten Form ab.
 
 ### Struktur
 
@@ -52,7 +52,7 @@ Die Oberfläche ist in vier zentrale Bereiche gegliedert:
 
 Titel, Back-Button sowie Anzeige von Ort und Wetter (Bruchtal).
 
-Zweck: Orientierung und situativer Kontext.
+Zweck: Orientierung und situationsbedingter Kontext.
 
 **2. Routenoptionen**
 
@@ -85,7 +85,7 @@ Zweck: Unterstützung der finalen Entscheidung und Sichtbarmachung von Risiken.
 ### Designmerkmale
 
 - Klare Trennung der Bereiche
-- Konsistente wiederkehrende Komponenten (Karten)
+- Konsistente wiederkehrende Komponenten 
 - Logische Informationshierarchie
 - Fokus auf Lesbarkeit und Verständlichkeit
 
@@ -106,17 +106,17 @@ Das Interface erfüllt die zentralen Ziele des Fellowship Companion:
 - **Entscheidungsunterstützung** — Mehrere Kriterien werden strukturiert und vergleichbar dargestellt
 - **Gemeinsames Verständnis** — Alle relevanten Informationen sind zentral sichtbar
 - **Transparenz** — Trade-offs zwischen Routen werden klar erkennbar
-- **Umgang mit Unsicherheit** — Fehlende Informationen werden durch die Gap-Analyse explizit gemacht
+- **Umgang mit Unsicherheit** — Fehlende Informationen werden durch die Gap-Analyse sichtbar gemacht
 
 ### Bezug zu Artefakt 2 (Wireframe)
 
 Die Umsetzung folgt dem Wireframe konsequent:
 
 - Gleiche Abschnittslogik (Routen → Kriterien → Ranking → Gaps)
-- Gleiche Gruppierungsstruktur (Karten pro Route und Kriterium)
+- Gleiche Gruppierungsstruktur (pro Route und Kriterium)
 - Gleiche Hierarchie und Anordnung
 
-Der Wireframe wurde direkt in eine funktionale, visuelle Struktur übersetzt, ohne die
+Der Wireframe wurde direkt in eine visuelle Struktur übersetzt, ohne die
 zugrunde liegende Logik zu verändern.
 
 ### Bewusst nicht umgesetzt
