@@ -1,0 +1,13 @@
+Place these image files in THIS folder (exact names, .png):
+
+  map-caradharas.png
+  map-moria.png
+  map-rohan.png
+  map-far-south.png
+
+Your HTML already points to these paths. If files are missing or renamed,
+the viewport works but images show as broken icons.
+
+Full paths on disk should be:
+  appdesign_DesignmitKarte/maps/map-caradharas.png
+  (same folder as TheFellowshipCompanionKartendesign.html, inside maps/)
