@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lotrdesign.css">
+    <script src="routenauswahl.js" defer></script>
+    <title>The Fellowship Companion</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <button class="left-button">BACK</button>
+        <h1 class="center-heading">Route Comparison</h1>
+        <div class="spacer"></div>
+    </div>
+    <h2 class="info-header"><!-- Definiert die Location mit Wetter Leiste, soll in weiterer folge random Locations aus dem internet verlinken diese in Mittelerde
+            Locations umbenennen und die dazugehörigen WetterDaten mit hochladen.-->
+        <span class="location-info">Middleearth, Rivendell</span>
+        <span class="weather-info">Heiter, 21°C</span>
+    </h2>
+    <section class="routes-container">
+        <h2 class="section-title">ROUTES</h2>
+        <!--die buttons werden als buttons ausgegeben nicht als  eine submit form-->
+        <div class="routes-grid">
+            <button type="button" class="route-btn is-active" data-route="caradhras" aria-pressed="true">
+                <span class="route-name">Pass of Caradhras</span>
+                <span class="proposer">vorgeschlagen von: Gandalf</span>
+            </button>
+
+            <button type="button" class="route-btn" data-route="moria" aria-pressed="false">
+                <span class="route-name">Mines of Moria</span>
+                <span class="proposer">vorgeschlagen von: Gimli</span>
+            </button>
+
+            <button type="button" class="route-btn" data-route="rohan" aria-pressed="false">
+                <span class="route-name">Gate of Rohan</span>
+                <span class="proposer">vorgeschlagen von: Aragorn</span>
+            </button>
+
+            <button type="button" class="route-btn" data-route="south" aria-pressed="false">
+                <span class="route-name">The way to the far south</span>
+                <span class="proposer">vorgeschlagen von: Frodo</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="map-section" id="route-map-section" aria-label="Route map">
+        <h2 class="map-section-title">Route map</h2>
+        <p class="map-route-lable" id="map-route-lable">Pass of Caradhras</p>
+        <div class="map-viewport" id="map-viewport" tabindex="0">
+            <div class="map-stage" id="map-stage">
+                <img class="map-image is-active" data-route="caradhras" src="maps/map-caradharas.png"
+                    alt="Map: Pass of Caradhaas" draggable="false">
+                <img class="map-image" data-route="moria" src="maps/map-moria.png" alt="Map: Mines of Moria"
+                    draggable="false" hidden>
+                <img class="map-image" data-route="rohan" src="maps/map-rohan.png" alt="Map: Gate of Rohan"
+                    draggable="false" hidden>
+                <img class="map-image" data-route="south" src="maps/map-far-south.png"
+                    alt="Map: The way to the far south" draggable="false" hidden>
+            </div>
+        </div>
+
+        <div class="map-controls" aria-label="Map zoom">
+            <button type="button" class="map-control-btn" data-action="zoom-out">-</button>
+            <button type="button" class="map-control-btn" data-action="zoom-in">+</button>
+            <button type="button" class="map-control-btn" data-action="reset">reset</button>
+        </div>
+    </section>
+       
+
+        <section class="ranking-module">
+            <h2 class="section-title">Route Ranking</h2>
+
+            <div class="ranking-list">
+                <!-- Rank 1 -->
+                <div class="rank-card gold">
+                    <div class="rank-number">#1</div>
+                    <div class="rank-info">
+                        <span class="route-name">Pass of Cadadhras</span>
+                        <span class="route-summary">Schnellste Verbindung, hohes Risiko (Gandalf)</span>
+                    </div>
+                </div>
+
+                <!-- Rank 2 -->
+                <div class="rank-card">
+                    <div class="rank-number">#2</div>
+                    <div class="rank-info">
+                        <span class="route-name">Mines of Moria</span>
+                        <span class="route-summary">Gefahr durch Balrog, unklare Versorgung (Gimli)</span>
+                    </div>
+                </div>
+
+                <!-- Rank 3 -->
+                <div class="rank-card">
+                    <div class="rank-number">#3</div>
+                    <div class="rank-info">
+                        <span class="route-name">Gate of Rohan</span>
+                        <span class="route-summary">Einfach aber langsam (Aragorn)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gap Analysis Box = Ursprüngliches Modell der Letzten Box für die Zusammenfassung und des View Gaps Buttons -->
+            <!--<div class="gap-analysis-box">
+            <div class="gap-content">
+            <span class="gap-title">Missing Information</span>
+            <p class="gap-text">Missing Information <strong>4 Gaps</strong> (Weather Caradhras, Supplies Moria).</p>
+            </div>
+            <button class="detail-btn" onklick="toggleDetails()">View Gaps</button>
+        </div>-->
+
+            <!--das element representiert das versteckte fenster mit den details  die nach dem drücken des "View Gaps" Buttons erscheinen soll-->
+            <!-- Gap Analysis Bereich -->
+            <section class="gap-container">
+                <div class="gap-analysis-box">
+                    <div class="gap-content">
+                        <span class="gap-title">Missing Information</span>
+                        <p class="gap-text">Missing Information <strong>4 Gaps</strong> (Weather Caradhras, Supplies
+                            Moria).
+                        </p>
+                    </div>
+                    <!-- Funktionsaufruf für die Logik -->
+                    <button class="detail-btn" onclick="toggleDetails()">View Gaps</button>
+                </div>
+
+                <!-- Das Detail-Dokument (initial versteckt durch CSS/JS) Hier die meldungen müssen noch interaktiv werden daten
+                     müssen aus einer Datenbank oder einem Dokument gezogen werden bzw aus den vorhanden datensätzen die in der App vorhanden sind-->
+                <div id="gap-details-modal" class="details-card">
+                    <div class="details-header">
+                        <h3>Detail Information: Gap Analysis</h3>
+                        <button class="close-btn" onclick="toggleDetails()">×</button>
+                    </div>
+                    <ul class="details-list">
+                        <li><strong>Weather Caradhras:</strong> Extreme Blizzards, way is or might be blocked.</li>
+                        <li><strong>Supplies Moria:</strong> Not enough Supplies for 10 days.</li>
+                        <li><strong>Status:</strong> CRITICAL - imidate action needed.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Das JavaScript bleibt im HTML (am Ende vor </body>) -->
+            <script>
+                function toggleDetails() {
+                    const modal = document.getElementById("gap-details-modal");
+                    if (modal.style.display === "none" || modal.style.display === "") {
+                        modal.style.display = "block";
+                    } else {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </section>
+
+        <!--Div element soll als Box erscheinen mit einer zusammenfassung der Gaps und auf der rechtenseite aus user Sicht einen View button haben um zu weitern
+           Deteils zu gelangen. Kann aber auch als ganzes ein klickbares Element sein welches die Zusammenfassung darstellt-->
+
+</body>
+
+</html>
