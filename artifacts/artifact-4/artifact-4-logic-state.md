@@ -16,7 +16,7 @@
     - [Dateien](#dateien)
     - [State-Modell](#state-modell)
     - [Logik – Was reagiert worauf?](#logik--was-reagiert-worauf)
-      - [a) Routenauswahl (bestehend, dokumentiert)](#a-routenauswahl-bestehend-dokumentiert)
+      - [a) Routenauswahl (bestehend)](#a-routenauswahl-bestehend)
       - [b) Wetter, Versorgung, Priorisierung (neu)](#b-wetter-versorgung-priorisierung-neu)
       - [c) Ranking-Berechnung (neu)](#c-ranking-berechnung-neu)
       - [d) Gap Analysis (neu, ersetzt statisches Markup)](#d-gap-analysis-neu-ersetzt-statisches-markup)
@@ -36,21 +36,15 @@
 
 ### Welche Fähigkeit wird implementiert?
 
-Die in Assignment 2 ausgewählte und in Assignment 3 statisch repräsentierte Fähigkeit:
-
 **C2 — Kriterienbasierter Routenvergleich.**
 
-Diese Capability wurde **nicht** erweitert oder umbenannt. Sie wird in Assignment 4 lediglich
-funktional: Was bisher als statische Darstellung vorlag (vier Routen, vier Kriterien, ein Ranking,
-eine Gap-Analyse), reagiert nun auf Eingaben und macht die Entscheidungslogik überprüfbar — genau
-wie es das in Assignment 2 formulierte Designziel verlangt.
+Was bisher als statische Darstellung vorlag (vier Routen, vier Kriterien, ein Ranking,
+eine Gap-Analyse), reagiert nun auf Eingaben und macht die Entscheidungslogik überprüfbar.
 
-Wichtig im Sinne von Assignment 2: Das System gibt **keine automatische Empfehlung** ab. Es zeigt,
+Wichtig: Das System gibt **keine automatische Empfehlung** ab. Es zeigt,
 *warum* eine Route vorne liegt, und überlässt die Entscheidung der Fellowship.
 
 ### Welcher Zustand wird gehalten und verändert?
-
-Die Fähigkeit hängt von einem expliziten, klar benennbaren Zustand ab:
 
 | State                | Typ                              | Beschreibung                                                                       |
 | -------------------- | -------------------------------- | ---------------------------------------------------------------------------------- |
@@ -64,14 +58,13 @@ Die Fähigkeit hängt von einem expliziten, klar benennbaren Zustand ab:
 | `gaps`               | `Array<Gap>` (abgeleitet)        | Fehlende/unsichere Informationen, abhängig von Wetter, Supply und Route.           |
 
 `currentRanking` und `gaps` sind **abgeleitete** Zustände — sie werden bei jeder Änderung der
-„primären“ States neu berechnet. Damit gibt es im System genau eine Quelle der Wahrheit
-(`state`-Objekt), und die UI ist eine Funktion davon.
+„primären" States neu berechnet. Damit gibt es im System genau eine Quelle: (`state`-Objekt).
 
 ### Warum ist das in dieser Phase der Reise wichtig?
 
 Die Fellowship hat Rivendell verlassen. Ab hier ändern sich Wetter, Versorgung und Risiko
 laufend — und Gandalf, Aragorn, Gimli und Frodo schlagen unterschiedliche Routen vor, *weil sie
-unterschiedliche Dinge gewichten*. Genau das fängt das System nun ein: Eine Veränderung der
+unterschiedliche Dinge anders bewerten*. Genau das fängt das System nun ein: Eine Veränderung der
 Bedingungen (z. B. Wintereinbruch am Caradhras) verändert sofort sichtbar das Ranking und die
 Gap-Analyse. Die Gefährten können dadurch:
 
@@ -89,17 +82,18 @@ Gap-Analyse. Die Gefährten können dadurch:
 | ----------------------------------------- | ---------------------------- | ---------------------------------------------------------------------- |
 | `TheFellowshipCompanionKartendesign.html` | leicht erweitert             | Kontrollen für Wetter/Supply/Priorisierung eingebaut, sonst unverändert.|
 | `lotrdesign.css`                          | im Wesentlichen unverändert  | Nur kleine Klassen für aktive Zustände (`.is-active`, `.is-warning`).  |
-| `routenauswahl.js`                        | bestehend, behält seine Rolle| Kartendarstellung: Routenwechsel, Zoom, Pan, Pinch (bereits vorhanden).|
-| `state.js` *(neu)*                        | neu                          | State-Container und Reducer für Wetter, Supply, Prioritäten, Ranking.   |
+| `routenauswahl.js`                        | erweitert                    | Bestehende Karten-Logik bleibt; State-Verwaltung, Ranking-Berechnung und Gap-Logik werden im selben File ergänzt.|
 
-Das bestehende `routenauswahl.js` wird **nicht** umgebaut. Es hört auf Klicks der Route-Buttons
-und behandelt die Karte — diese Verantwortung bleibt bei ihm. `state.js` hängt sich an dieselben
-Buttons (und an die neuen Kontrollen) und kümmert sich ausschließlich um den Anwendungs-Zustand.
-Trennung der Verantwortlichkeiten – das war eine bewusste Entscheidung (siehe Rationale).
+Die bestehende Struktur in `routenauswahl.js` (`(function () { ... })()`) wird beibehalten.
+Innerhalb dieser Closure existieren bereits Konstanten wie `ROUTE_LABELS` und `ROUTE_DEFAULT_VIEW`
+sowie Variablen für den Kartenzustand (`scale`, `translateX`, `translateY`). In das gleiche Muster
+fügt sich ein zentrales `state`-Objekt für den Anwendungs-Zustand ein. Damit bleibt **alles in
+einer Datei**.
 
 ### State-Modell
 
-Der gesamte Zustand liegt in einem einzigen Objekt:
+Der gesamte Anwendungs-Zustand liegt in einem einzigen Objekt, das innerhalb der bestehenden
+Funkiton deklariert wird:
 
 ```js
 const state = {
@@ -119,15 +113,20 @@ function setState(patch) {
 }
 ```
 
-`render()` berechnet das Ranking und die Gaps neu und aktualisiert die UI. Damit ist garantiert:
-**Jede sichtbare Änderung ist Folge einer Zustandsänderung — nichts wird „nebenher“ manipuliert.**
+`render()` berechnet das Ranking und die Gaps neu und aktualisiert die Oberfläche. Damit ist garantiert:
+**Jede sichtbare Änderung ist Folge einer Zustandsänderung.**
+
+Der bestehende Karten-Zustand (`scale`, `translateX`, `translateY`, `savedViews`) bleibt davon
+unberührt — er beschreibt die *Darstellung* der Karte, nicht die *Anwendungslogik*. Beides
+ist in derselben Datei, ohne sich gegenseitig zu stören.
 
 ### Logik – Was reagiert worauf?
 
-#### a) Routenauswahl (bestehend, dokumentiert)
+#### a) Routenauswahl (bestehend)
 
-Klick auf einen Route-Button → `routenauswahl.js` aktualisiert die Karte; gleichzeitig hört
-`state.js` denselben Klick ab und ruft `setState({ selectedRoute: id })` auf.
+Die bestehende Funktion `setActiveRoute(routeId)` wird minimal erweitert: am Ende ruft sie
+zusätzlich `setState({ selectedRoute: routeId })` auf. Damit lösen Klicks auf einen Route-Button
+gleichzeitig das bekannte Karten-Verhalten **und** die Neuberechnung vom Ranking aus.
 
 #### b) Wetter, Versorgung, Priorisierung (neu)
 
@@ -183,7 +182,7 @@ function computeGaps(state) {
 ```
 
 So entsteht ein direkter, *erklärbarer* Zusammenhang zwischen Bedingungen und sichtbaren Lücken:
-Wenn ein Nutzer fragt „warum erscheint diese Warnung?“, lässt sich das aus einer einzigen
+Wenn ein Nutzer fragt „warum erscheint diese Warnung?", lässt sich das aus einer einzigen
 Funktion beantworten.
 
 ---
@@ -197,16 +196,16 @@ Drei beispielhafte Interaktionen — sie zeigen den Übergang von *Repräsentati
 1. **Wetter → Caradhras-Fall**
    `setState({ weatherCondition: "snow" })`
    → Safety-Score Caradhras sinkt → Rohan rückt im Ranking vor → neue Gap-Karte erscheint:
-   *„Pass likely blocked“*. Die UI ändert sich an drei Stellen gleichzeitig, aber alles geht auf
+   *„Pass likely blocked"*. Die UI ändert sich an drei Stellen gleichzeitig, aber alles geht auf
    eine einzige State-Änderung zurück.
 
 2. **Versorgung → Moria-Fall**
    `setState({ supplyLevel: "low" })`
    → Supply-Score Moria sinkt → Position 2 wird ggf. zu Position 3 → Gap *„Insufficient
-   provisions“* erscheint.
+   provisions"* erscheint.
 
 3. **Priorisierung verschieben**
-   Slider „Sicherheit“ hochziehen → Gewicht von 0.5 auf 0.8 → Rohan steigt auf, Caradhras fällt.
+   Slider „Sicherheit" hochziehen → Gewicht von 0.5 auf 0.8 → Rohan steigt auf, Caradhras fällt.
    Der Nutzer sieht, *welche Annahme welche Empfehlung trägt*.
 
 ### Was die Dynamik bewusst *nicht* leistet
@@ -224,7 +223,7 @@ Drei beispielhafte Interaktionen — sie zeigen den Übergang von *Repräsentati
 ### Bezug zu Assignment 1 (Intent & Value)
 
 Assignment 1 hat formuliert: Das System soll *„Informationen verständlich darstellen,
-Unsicherheiten sichtbar machen, sichere Entscheidungen ermöglichen“*. Die Logik unterstützt
+Unsicherheiten sichtbar machen, sichere Entscheidungen ermöglichen"*. Die Logik unterstützt
 exakt das:
 
 - Verständlichkeit → eine einzige Quelle der Wahrheit (`state`); jede Ansicht ist erklärbar.
@@ -238,9 +237,9 @@ exakt das:
 Der Flow in Assignment 2 sah vor: Nutzer wählt Route → vergleicht Kriterien → priorisiert
 optional → entscheidet bewusst. Genau dieser Pfad ist jetzt ausführbar:
 
-- „Routen auswählen“ wirkt auf Karte **und** State (zwei Module hören auf dieselbe Aktion).
-- „Kriterien vergleichen“ ist die jetzt **berechnete** Ranking-Liste.
-- „Priorisieren“ existiert als reale Eingabe und verändert das Ranking sofort.
+- „Routen auswählen" wirkt auf Karte **und** State (beides hängt am selben Button-Handler).
+- „Kriterien vergleichen" ist die jetzt **berechnete** Ranking-Liste.
+- „Priorisieren" existiert als reale Eingabe und verändert das Ranking sofort.
 - Eine **automatische Empfehlung** wurde — wie in Assignment 2 begründet — weiterhin nicht
   eingebaut.
 
@@ -250,12 +249,12 @@ optional → entscheidet bewusst. Genau dieser Pfad ist jetzt ausführbar:
   Framework, kein `localStorage`, keine API-Aufrufe.
 - **Kein Redesign**. Die UI von Assignment 3 bleibt strukturell unverändert; die neuen Kontrollen
   passen sich farblich und typografisch in das bestehende `lotrdesign.css` ein.
-- **Trennung der Verantwortlichkeiten**: `routenauswahl.js` bleibt für die Karte zuständig
-  (Zoom/Pan/Pinch). `state.js` ist für *Anwendungs*-Zustand zuständig. Beide hängen an
-  denselben Buttons, treten sich aber nicht in die Quere.
+- **Eine JS-Datei**. Die bestehende `routenauswahl.js` wird erweitert, nicht aufgeteilt. Das hält
+  die Projektstruktur unverändert und vermeidet eine implizite Strukturänderung, die der Brief
+  nicht erlaubt.
 - **Single Source of Truth**: jeder Render geht durch eine `render()`-Funktion, die aus dem
   Zustand die DOM-Updates ableitet. Kein paralleles DOM-Stricken in Event-Handlern.
-- **Annahme:** Die Basis-Scores (Safety/Duration/Supply pro Route) sind nicht „echt“, sondern
+- **Annahme:** Die Basis-Scores (Safety/Duration/Supply pro Route) sind nicht „echt", sondern
   spiegeln die in Assignment 3 dargestellten Bewertungen wider. Das ist legitim, weil die
   Aufgabe Verhalten zeigen soll, nicht echte Geodaten verarbeiten.
 
@@ -263,10 +262,10 @@ optional → entscheidet bewusst. Genau dieser Pfad ist jetzt ausführbar:
 
 - **Persistenz**: Zustand verschwindet beim Reload. Würde durch `localStorage` einfach möglich
   sein, ist aber laut Brief untersagt.
-- **Mehrere gleichzeitige Nutzer / „Stimmen“ der Fellowship**: in Assignment 1 erwähnt, gehört
+- **Mehrere gleichzeitige Nutzer / „Stimmen" der Fellowship**: in Assignment 1 erwähnt, gehört
   aber nicht zu C2 und wäre ein neues Feature.
 - **Animationen / Visualisierung von Ranking-Wechseln**: bewusst weggelassen, weil die Aufgabe
-  *„behavior, state, and constraints — not new visuals“* fordert.
+  *„behavior, state, and constraints — not new visuals"* fordert.
 - **Validierung extremer Eingaben** (z. B. alle Prioritäten = 0): sinnvoll, aber für die
   Demonstration der Capability nicht zwingend.
 - **Begründung der Gaps mit Datenalter / Quelle**: in Assignment 2 als Designziel angerissen,
@@ -280,8 +279,8 @@ optional → entscheidet bewusst. Genau dieser Pfad ist jetzt ausführbar:
   Andersherum entsteht Chaos.
 - *Abgeleiteter Zustand* (Ranking, Gaps) gehört **nicht** ins State-Objekt. Wer das doppelt
   pflegt, baut sich Bugs.
-- *Trennung der Verantwortlichkeiten* zwischen `routenauswahl.js` (Karte) und `state.js`
-  (Anwendungslogik) macht beide Dateien lesbarer als ein gemeinsamer „Mega-Controller“.
+- *Karten-Zustand* (Zoom, Pan) und *Anwendungs-Zustand* (Route, Wetter, Priorisierung) können
+  problemlos in derselben Datei koexistieren — sie reden über unterschiedliche Dinge.
 - *Constraints helfen*: Das Verbot von Frameworks und Persistenz hat dazu gezwungen, die
   Logik ehrlich klein zu halten — was ihr gut tut.
 - *Verhalten ≠ Empfehlung*. Das System ist jetzt dynamisch, ohne der Fellowship die Entscheidung
@@ -290,4 +289,3 @@ optional → entscheidet bewusst. Genau dieser Pfad ist jetzt ausführbar:
 ---
 
 🔙 [Zurück zum Red Book](https://oneapptorulethemall-dib.github.io/The-Fellowship-of-the-Code2026/)
-
