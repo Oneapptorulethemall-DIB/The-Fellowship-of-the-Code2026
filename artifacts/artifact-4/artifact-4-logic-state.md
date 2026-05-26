@@ -6,13 +6,13 @@
 
 ## Inhaltsverzeichnis
 
-- [Artefakt 4 – TFC: Logic \& State](#artefakt-4--tfc-logic--state)
+- [Artefakt 4 – TFC: Logic & State](#artefakt-4--tfc-logic--state)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [1. System Capability](#1-system-capability)
     - [Welche Fähigkeit wird implementiert?](#welche-fähigkeit-wird-implementiert)
     - [Welcher Zustand wird gehalten und verändert?](#welcher-zustand-wird-gehalten-und-verändert)
     - [Warum ist das in dieser Phase der Reise wichtig?](#warum-ist-das-in-dieser-phase-der-reise-wichtig)
-  - [2. Logic \& State Implementation](#2-logic--state-implementation)
+  - [2. Logic & State Implementation](#2-logic--state-implementation)
     - [Dateien](#dateien)
     - [State-Modell](#state-modell)
     - [Logik – Was reagiert worauf?](#logik--was-reagiert-worauf)
@@ -24,8 +24,8 @@
     - [Reaktionsketten](#reaktionsketten)
     - [Was die Dynamik bewusst *nicht* leistet](#was-die-dynamik-bewusst-nicht-leistet)
   - [4. Design Rationale](#4-design-rationale)
-    - [Bezug zu Assignment 1 (Intent \& Value)](#bezug-zu-assignment-1-intent--value)
-    - [Bezug zu Assignment 2 (Flow \& Wireframe)](#bezug-zu-assignment-2-flow--wireframe)
+    - [Bezug zu Assignment 1 (Intent & Value)](#bezug-zu-assignment-1-intent--value)
+    - [Bezug zu Assignment 2 (Flow & Wireframe)](#bezug-zu-assignment-2-flow--wireframe)
     - [Constraints und Annahmen, die die Logik geformt haben](#constraints-und-annahmen-die-die-logik-geformt-haben)
     - [Was bewusst (noch) nicht implementiert wurde](#was-bewusst-noch-nicht-implementiert-wurde)
   - [5. Gelernte Lektionen](#5-gelernte-lektionen)
