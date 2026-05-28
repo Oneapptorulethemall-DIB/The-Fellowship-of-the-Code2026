@@ -89,6 +89,15 @@ Alle wesentlichen Änderungen am Logbuch:
 <li>2026-05-04: Neue Ideen für Companion App gesammelt und für nächsten Arbeitsschritt geplant zu implementerien.</li>
 <li>2026-05-05: Artefakt und Chapter Inhalte definiert und erstellt.</li>
 <li>2026-05-05: Redbook erweitert und angepasst.</li>
+<li>2026-05-14: Zusammenkunft um JS zu definieren.</li>
+<li>2026-05-14: Erste Zeilen mit Hilfe von AI erstellt.</li>
+<li>2026-05-16: Gregor erstellt Maps für Caradharas, Moria, Rohan, South. (artifact-4/src/maps)</li>
+<li>2026-05-16: Implementierung des JS Codes.</li>
+<li>2026-05-20: Codereview und Update des Codes.</li>
+<li>2026-05-26: Erstellung Artefakt und Inhalt definiert.</li>
+<li>2026-05-26: Zusammenkunft für "reading-the-runes.md" und Diskussion.</li>
+<li>2026-05-26: Erstellung "reading-the-runes.md".</li>
+<li>2026-05-28: Update Changelog.</li>
 </ul>
 
 </details>
