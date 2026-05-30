@@ -1,4 +1,4 @@
-# Kapitel 4: When Things React
+# Kapitel 4: Wenn "Dinge" reagieren
 
 > *„Even the smallest person can change the course of the future." – Galadriel*
 
