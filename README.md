@@ -51,6 +51,7 @@ Hier werden die Etappen unserer Reise dokumentiert:
 - [Kapitel 1 – Der Aufbruch](./chapters/chapter-1-setting-out.md)
 - [Kapitel 2 - Die Wegentscheidung](./chapters/chapter-2-paths-choices.md)
 - [Kapitel 3 - Mach es sichtbar](./chapters/chapter-3-representation.md)
+- [Kapitel 4 - Wenn Dinge reagieren](./chapters/chapter-4-when-things-react.md)
 
 ## 🏺 Artifacts
 
@@ -98,6 +99,7 @@ Alle wesentlichen Änderungen am Logbuch:
 <li>2026-05-26: Zusammenkunft für "reading-the-runes.md" und Diskussion.</li>
 <li>2026-05-26: Erstellung "reading-the-runes.md".</li>
 <li>2026-05-28: Update Changelog.</li>
+<li>2026-05-30: Erstellen von Kapitel 4</li>
 </ul>
 
 </details>
