@@ -89,7 +89,7 @@ Genau diese drei Dinge macht die App jetzt — nicht mehr & nicht weniger.
 
 | Datei                                     | Status           | Rolle                                                                |
 | ----------------------------------------- | -----------      | -------------------------------------------------------------------- |
-| `TheFellowshipCompanionKartendesign.html` | unverändert      | Statische Struktur aus Assignment 3 plus eine `<script>`-Funktion `toggleDetails()` für das Gap-Modal. |
+| `TheFellowshipCompanionKartendesign.html` | unverändert      | Statische Struktur aus Assignment 3 plus eine `<script>`-Funktion `toggleDetails()` für das Gap-Fenster. |
 | `lotrdesign.css`                          | etwas abgeändert | Styling aus Assignment 3; `.is-active`, `.is-dragging` werden von JS gesetzt. |
 | `routenauswahl.js`                        | aktiv            | Enthält die gesamte Anwendungslogik in einer IIFE.                    |
 
