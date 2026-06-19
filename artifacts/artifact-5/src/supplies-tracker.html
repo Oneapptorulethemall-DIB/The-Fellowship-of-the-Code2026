@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplies Tracker</title>
+
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+
+    <!-- Stylesheet placeholder -->
+    <link rel="stylesheet" href="supplies-tracker.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <button id="btn-back" type="button">Back</button>
+        <h1 id="page-title">Supplies tracker</h1>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== SUPPLY ITEMS LIST ===== -->
+        <section id="supply-list" aria-label="Supply items">
+
+            <div class="supply-row" id="row-lembas" data-item="lembas">
+                <button class="btn-add" type="button" data-item="lembas" aria-label="Add Lembas">+</button>
+                <span class="item-label" id="label-lembas">Add Lembas</span>
+                <button class="btn-remove" type="button" data-item="lembas" aria-label="Remove Lembas">-</button>
+                <span class="low-stock-warning" id="warning-lembas" hidden>Low stock!</span>
+            </div>
+
+            <div class="supply-row" id="row-potatoes" data-item="potatoes">
+                <button class="btn-add" type="button" data-item="potatoes" aria-label="Add Potatoes">+</button>
+                <span class="item-label" id="label-potatoes">Add Potatoes</span>
+                <button class="btn-remove" type="button" data-item="potatoes" aria-label="Remove Potatoes">-</button>
+                <span class="low-stock-warning" id="warning-potatoes" hidden>Low stock!</span>
+            </div>
+
+            <div class="supply-row" id="row-water" data-item="water">
+                <button class="btn-add" type="button" data-item="water" aria-label="Add Water">+</button>
+                <span class="item-label" id="label-water">Add Water</span>
+                <button class="btn-remove" type="button" data-item="water" aria-label="Remove Water">-</button>
+                <span class="low-stock-warning" id="warning-water" hidden>Low stock!</span>
+            </div>
+
+            <div class="supply-row" id="row-pipeweed" data-item="pipeweed">
+                <button class="btn-add" type="button" data-item="pipeweed" aria-label="Add Pipeweed">+</button>
+                <span class="item-label" id="label-pipeweed">Add Pipeweed</span>
+                <button class="btn-remove" type="button" data-item="pipeweed" aria-label="Remove Pipeweed">-</button>
+                <span class="low-stock-warning" id="warning-pipeweed" hidden>Low stock!</span>
+            </div>
+
+        </section>
+
+        <!-- ===== CHART SECTION ===== -->
+        <section id="chart-section" aria-label="Supplies chart">
+
+            <div id="chart-wrapper">
+                <canvas id="supplies-chart" role="img" aria-label="Bar chart showing supply quantities"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- App logic placeholder -->
+    <script src="supplies-tracker.js" defer></script>
+
+</body>
+</html>

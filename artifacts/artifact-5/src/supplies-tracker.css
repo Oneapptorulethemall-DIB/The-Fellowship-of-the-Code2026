@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Supplies Tracker — Stylesheet
+   Design language matches lotrdesign.css:
+   - Dark slate header (#455361)
+   - Gold accent borders (#8e794f / #e2d1a6)
+   - Rounded cards, mobile-first, touch-friendly controls
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-dark:       #455361;
+  --color-mid:        #5a6b7d;
+  --color-dark-active: #3d4a58;
+  --color-gold-dark:  #8e794f;
+  --color-gold-light: #e2d1a6;
+  --color-gold-hover: #d4a017;
+  --color-text:       #333;
+  --border-gold:      1px solid var(--color-gold-dark);
+  --color-warning:    #FF0000;   
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef1f4;
+  color: var(--color-text);
+}
+
+/* ===== HEADER ===== */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-dark);
+  padding: 10px 0;
+}
+
+#btn-back {
+  position: relative;
+  left: 10px;
+  margin: 0;
+  padding: 12px 20px;
+  border: none;
+  color: white;
+  background: var(--color-mid);
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+#btn-back,
+.btn-add,
+.btn-remove {
+  border-radius: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#btn-back:active {
+  background: var(--color-dark-active);
+  transform: scale(0.96);
+}
+
+#page-title {
+  flex-grow: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  line-height: 1.2;
+}
+
+/* ===== MAIN CONTENT ===== */
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ===== SUPPLY LIST ===== */
+
+#supply-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--color-dark);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.supply-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Prevent wrapping on larger screens */
+  gap: 10px;
+  background: var(--color-mid);
+  border: var(--border-gold);
+  border-radius: 10px;
+  padding: 12px 18px;
+}
+
+.item-label {
+  flex: 1 1 auto;
+  min-width: 0; /* Allow text to shrink */
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis; /*if text too long, show ellipsis*/
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
+.low-stock-warning {
+  flex-basis: 100%;
+  order: 1;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-warning);
+  letter-spacing: 0.4px;
+}
+
+
+.btn-add,
+.btn-remove {
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-text);
+  background: var(--color-gold-light);
+  border: var(--border-gold);
+  transition: background 0.2s, transform 0.1s;
+  }
+
+@media (hover: hover) {
+  .btn-add:hover,
+  .btn-remove:hover {
+    background: var(--color-gold-hover);
+  }
+}
+
+.btn-add:active,
+.btn-remove:active {
+  background: var(--color-gold-dark);
+  color: white;
+  transform: scale(0.95);
+}
+
+/* ===== CHART SECTION ===== */
+
+#chart-section {
+  background: #ffffff;
+  border: var(--border-gold);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+#chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 40vh, 420px);
+}
+
+#supplies-chart {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media (max-width: 360px) { /* Adjust layout for small screens, Breakpoint where the text does not align with the buttons*/
+  #main-content {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .supply-row {
+    flex-wrap: wrap;
+  }
+
+  .item-label {
+    flex: 1 1 100%;
+    order: -1;
+    margin-bottom: 6px;
+  }
+
+  #chart-section {
+    padding: 15px;
+  }
+}
