@@ -1,0 +1,26 @@
+---
+config:
+  layout: dagre
+---
+flowchart TD
+    A["User Opens Supplies Tracker"] --> B{"Select Action"}
+    B -->|Add Item| C{"Choose Item Type"}
+    B -->|View Inventory| D["Display Chart"]
+    
+    C -->|Add Lembas| E["Increment Lembas Count"]
+    C -->|Add Potatoes| F["Increment Potatoes Count"]
+    C -->|Add Water| G["Increment Water Count"]
+    C -->|Add Pipeweed| H["Increment Pipeweed Count"]
+    
+    E --> I["Update Database"]
+    F --> I
+    G --> I
+    H --> I
+    
+    I --> J["Refresh Chart Display"]
+    J --> D
+    D --> K["Show Quantities by Unit"]
+    K --> L{"More Actions?"}
+    L -->|Yes| B
+    L -->|No| M["Go Back"]
+    M --> N["Return to Home"]
