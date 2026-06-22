@@ -46,7 +46,8 @@ alles ohne weiteren manuellen Schritt.
   Schatten wachsen"* und *„Der Ring brennt/schmerzt"*
 - E-Mail signiert mit *„— Die Gefährten"*
 
-> Ein Screenshot des Flows liegt der Abgabe als separate Bilddatei bei.
+> Ein Word des Flows liegt der Abgabe als separate Bilddatei bei - und ist hier Verlinkt:
+> [Dokumentation Side Quest (DOCX)](../src/Dokumentation%20Side%20Quest.docx)
 
 ## 2. Low-Code-Spiel – Flug von Gwaihir
 
