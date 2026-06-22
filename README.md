@@ -61,7 +61,7 @@ Wichtige Dokumente und Meilensteine des Projekts:
 - [Artefakt 2 - Entscheidungen](./artifacts/artifact-2/artifact-2-decisions.md)
 - [Artefakt 3 - Mach es sichtbar](./artifacts/artifact-3/artifact-3-representation.md)
 - [Artefakt 4 - Anwendungsdesign](./artifacts/artifact-4/artifact-4-logic-state.md)
-- [Artefakt 5 - Integrationserweiterung](./artifacts/artifacts-5/artifact-5-integration-extention.md)
+- [Artefakt 5 - Integration & Erweiterung](./artifacts/artifact-5/artifact-5-integration-extention.md)
 
 ## 🕒 Changelog
 
