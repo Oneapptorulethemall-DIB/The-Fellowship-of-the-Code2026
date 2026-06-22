@@ -41,7 +41,7 @@ diesen Zusammenhang sichtbar und verbindet so Versorgung und Wegentscheidung.
 
 ## 2. Systemablauf (Flow)
 
-**Flowchart:** [flowchart-system.mermaid.md](src/Supplies-Tracker-Action-Flow-2026-06-17-092026.mmd)
+**Flowchart:** [flowchart-system.mermaid.md](./artifacts/artifact-5/src/Supplies-Tracker-Action-Flow.mmd)
 
 Der Systemablauf zeigt, wie die Vorratsverwaltung mit dem bestehenden System zusammenhängt
 — nicht den detaillierten Klick-Ablauf, sondern die Verbindungen auf Systemebene.
@@ -65,7 +65,7 @@ bereits bestehende Funktion.
 
 ## 3. System-Wireframe
 
-**Wireframe:** [wireframe-system.png](src/wireframe-system.png)
+**Wireframe:** [wireframe-system.png](./artifacts/artifact-5/src/wireframe-system.png)
 
 Der System-Wireframe zeigt, wo die Vorratsverwaltung im Gesamtsystem angesiedelt ist und
 wie sich ein Nutzer zwischen den Teilen bewegt:
