@@ -41,7 +41,7 @@ diesen Zusammenhang sichtbar und verbindet so Versorgung und Wegentscheidung.
 
 ## 2. Systemablauf (Flow)
 
-**Flowchart:** [flowchart-system.mermaid.md](src/flowchart-system.mermaid.md)
+**Flowchart:** [flowchart-system.mermaid.md](src/Supplies-Tracker-Action-Flow-2026-06-17-092026.mmd)
 
 Der Systemablauf zeigt, wie die Vorratsverwaltung mit dem bestehenden System zusammenhängt
 — nicht den detaillierten Klick-Ablauf, sondern die Verbindungen auf Systemebene.
