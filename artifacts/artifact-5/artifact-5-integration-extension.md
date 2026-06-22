@@ -54,7 +54,7 @@ Der Ablauf zeigt, wie die Vorratsverwaltung Schritt für Schritt funktioniert:
 
 ## 3. System-Wireframe
 
-**Wireframe:** [wireframe-system.png](./artifacts/artifact-5/src/wireframe-system.png)
+**Wireframe:** [wireframe-system.png](src/wireframe-system.jpeg)
 
 Der Wireframe zeigt den Aufbau der Vorratsverwaltung:
 
