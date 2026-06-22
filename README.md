@@ -52,6 +52,7 @@ Hier werden die Etappen unserer Reise dokumentiert:
 - [Kapitel 2 - Die Wegentscheidung](./chapters/chapter-2-paths-choices.md)
 - [Kapitel 3 - Mach es sichtbar](./chapters/chapter-3-representation.md)
 - [Kapitel 4 - Wenn Dinge reagieren](./chapters/chapter-4-when-things-react.md)
+- [Kapitel 5 - Integration & Erweiterung](./chapters/chapter-5-the-tale-continues.md)
 
 ## 🏺 Artifacts
 
@@ -101,6 +102,9 @@ Alle wesentlichen Änderungen am Logbuch:
 <li>2026-05-26: Erstellung "reading-the-runes.md".</li>
 <li>2026-05-28: Update Changelog.</li>
 <li>2026-05-30: Erstellen von Kapitel 4</li>
+<li>2026-04-27: Supplies Tracker (Artefakt 5) mit HTML, CSS und JS erstellt.</li>
+<li>2026-04-27: Chart.js als Erweiterung eingebunden – Bestand wird als Diagramm angezeigt.</li>
+<li>2026-04-27: chapter-5-the-tale-continues.md hinzugefügt und in der README verlinkt.</li>
 </ul>
 
 </details>
