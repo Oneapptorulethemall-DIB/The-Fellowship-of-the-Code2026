@@ -26,16 +26,15 @@ verringert werden, und bei zu geringem Bestand erscheint eine Warnung.
 
 **Warum diese Fähigkeit?**
 
-Die Vorratsverwaltung schließt direkt an den Routenvergleich aus den vorherigen Phasen an.
-Dort war **Versorgung (Supply)** bereits eines der zentralen Bewertungskriterien. Bisher
-war dieser Wert aber nur eine feste Angabe — jetzt liefert die Vorratsverwaltung die echten,
-aktuellen Bestandsdaten dazu.
+Auf einer langen und gefährlichen Reise sind die Vorräte überlebenswichtig. Wer den
+Überblick verliert, riskiert, ohne Wasser oder Nahrung dazustehen. Die Vorratsverwaltung
+macht den aktuellen Bestand jederzeit sichtbar und warnt früh, bevor etwas knapp wird.
 
 **Bedeutung für die Fellowship**
 
-Eine Route ist nur dann sinnvoll, wenn die Vorräte für die Reisedauer reichen. Eine Strecke
-über 10 Tage nützt nichts, wenn das Wasser für 3 Tage reicht. Die Vorratsverwaltung macht
-diesen Zusammenhang sichtbar und verbindet so Versorgung und Wegentscheidung.
+Die Gemeinschaft muss ihre begrenzten Mittel sorgfältig einteilen. Diese Fähigkeit gibt
+ihr ein einfaches Werkzeug an die Hand, um Engpässe rechtzeitig zu erkennen und
+vorausschauend zu handeln.
 
 ---
 
@@ -43,23 +42,13 @@ diesen Zusammenhang sichtbar und verbindet so Versorgung und Wegentscheidung.
 
 **Flowchart:** [flowchart-system-mermaid.mmd](src/flowchart-system-mermaid.mmd)
 
-Der Systemablauf zeigt, wie die Vorratsverwaltung mit dem bestehenden System zusammenhängt
-— nicht den detaillierten Klick-Ablauf, sondern die Verbindungen auf Systemebene.
+Der Ablauf zeigt, wie die Vorratsverwaltung Schritt für Schritt funktioniert:
 
-**Einstiegspunkt:**
-
-Vom Hauptmenü des Fellowship Companion gelangt der Nutzer entweder zum **Routenvergleich**
-(bestehend) oder zur **Vorratsverwaltung** (neu).
-
-**Übergänge und Abhängigkeiten:**
-
-- Die Vorratsverwaltung verwaltet den aktuellen Bestand aller Posten.
-- Sinkt ein Bestand unter das Minimum, wird eine Warnung ausgelöst.
-- Diese Bestandsdaten fließen in das **Supply-Kriterium** des Routenvergleichs ein.
-- So beeinflusst der Vorrat indirekt, welche Route realistisch machbar ist.
-
-Die neue Fähigkeit ist damit kein isoliertes Werkzeug, sondern eine Datenquelle für eine
-bereits bestehende Funktion.
+- Der Nutzer öffnet den Supplies Tracker.
+- Er wählt einen Posten und erhöht oder verringert dessen Menge.
+- Der neue Bestand wird im State gespeichert.
+- Liegt der Bestand unter dem Minimum, wird eine Warnung angezeigt.
+- Das Diagramm wird aktualisiert und zeigt die Mengen je Einheit.
 
 ---
 
@@ -67,13 +56,12 @@ bereits bestehende Funktion.
 
 **Wireframe:** [wireframe-system.png](./artifacts/artifact-5/src/wireframe-system.png)
 
-Der System-Wireframe zeigt, wo die Vorratsverwaltung im Gesamtsystem angesiedelt ist und
-wie sich ein Nutzer zwischen den Teilen bewegt:
+Der Wireframe zeigt den Aufbau der Vorratsverwaltung:
 
-- **Hauptmenü** als zentraler Ausgangspunkt
-- **Routenvergleich** als bestehende Fähigkeit
-- **Vorratsverwaltung** als neue Fähigkeit, erreichbar über das Menü
-- Eine sichtbare Verbindung zwischen Vorräten und dem Supply-Kriterium der Routen
+- **Kopfzeile** mit Titel und Zurück-Button
+- **Vorratsliste** mit je einem +/- Button pro Posten
+- **Warnhinweis**, der bei niedrigem Bestand erscheint
+- **Diagramm-Bereich**, der die Mengen visuell darstellt
 
 ---
 
@@ -112,12 +100,9 @@ Lagerbestand als **Balkendiagramm** dar.
 
 - Sie beeinflusst **Bedeutung und Verhalten**, nicht nur das Aussehen: Der Bestand wird
   sofort visuell erfassbar, und Engpässe fallen direkt ins Auge.
-- Sie **verbindet sich mit einer bestehenden Fähigkeit**: Das Diagramm zeigt genau die
-  Versorgungslage, die für den Routenvergleich relevant ist.
+- Sie **verbindet sich mit einer bestehenden Fähigkeit**: Das Diagramm zeigt die
+  Versorgungslage, die für den Routenvergleich relevant ist. (Aber noch nicht verküpft ist)
 - Bei jeder Änderung des State wird das Diagramm über `updateChart()` automatisch aktualisiert.
-
-Damit berührt das System zum ersten Mal etwas außerhalb seiner selbst (eine externe
-Bibliothek) — und gewinnt dadurch echten Mehrwert.
 
 ---
 
@@ -129,12 +114,6 @@ Der Fellowship Companion sollte Entscheidungen unter Unsicherheit unterstützen.
 Vorratsverwaltung erweitert genau das: Sie macht die Versorgungslage transparent und
 verbindet sie mit der Wegentscheidung.
 
-**Wie die Teile zusammenpassen:**
-
-- Routenvergleich = welche Wege gibt es und wie unterscheiden sie sich?
-- Vorratsverwaltung = reichen unsere Mittel für diese Wege?
-- Beide teilen das Kriterium **Versorgung** und greifen so ineinander.
-
 **Warum die Erweiterung Sinn ergibt:**
 
 Chart.js verwandelt reine Zahlen in ein sofort verständliches Bild — passend zum
@@ -142,7 +121,6 @@ Grundprinzip aller bisherigen Phasen: Struktur und Sichtbarkeit vor Komplexität
 
 **Was bewusst nicht gebaut wurde:**
 
-- Keine Datenbank — Vorräte werden nicht dauerhaft gespeichert (Reset beim Neuladen).
 - Keine automatische Verknüpfung, die das Ranking direkt ändert (die Verbindung bleibt konzeptionell).
 - Keine Mehrbenutzer-Synchronisation.
 - Kein Verlauf oder Verbrauchsprognose.
@@ -155,17 +133,16 @@ Der Fokus liegt auf einer **klaren, erklärbaren Integration**, nicht auf Umfang
 
 Seit Phase 1 hat sich unser Verständnis deutlich verändert.
 
-- **Am Anfang** dachten wir in einzelnen Funktionen. Heute sehen wir das System als
-  Zusammenspiel von Teilen, die sich gegenseitig beeinflussen.
+- **Am Anfang** dachten wir in einzelnen Funktionen. Heute achten wir stärker darauf, dass
+  jede Funktion klar und nachvollziehbar bleibt.
 - **Der Umfang** wurde bewusst kleiner und klarer. Wir haben gelernt, dass weglassen oft
-  wertvoller ist als hinzufügen.
-- **Die Entscheidungen** wurden bewusster: Jede Funktion muss sich begründen lassen und
-  zum Rest passen.
-- **Die Erweiterung** hat gezeigt, dass ein System durch eine durchdachte Verbindung nach
-  außen mehr gewinnt als durch viele neue Einzelfunktionen.
+  wertvoller ist als hinzufügen - vor allem beim Code!
+- **Die Entscheidungen** wurden bewusster: Jede Funktion muss sich begründen lassen.
+- **Die Erweiterung** hat gezeigt, dass eine durchdachte externe Bibliothek einer Funktion
+  echten Mehrwert geben kann, ohne sie zu verkomplizieren.
 
-Aus einer Sammlung von Ideen ist so ein zusammenhängendes, nachvollziehbares System
-geworden.
+Aus einer Sammlung von Ideen ist so ein klar umgesetztes, verständliches Werkzeug geworden.
+Wünschenswert wäre eine komplette Integration und das Zusammenspiel der beiden Funktionen in einer App. 
 
 ---
 
