@@ -63,7 +63,7 @@ Editor.
 ### Herr-der-Ringe-Bezug
 
 - Gwaihir ist in *Der Herr der Ringe* der Herr der Adler, der Frodo und Sam im
-  entscheidensten Moment vom Schicksalesberg rettet.
+  entschiedensten Moment vom Schicksalesberg rettet.
 - Thema, Titel und Spielfigur greifen diese Rolle als fliegender Helfer auf.
 
 ## Team
